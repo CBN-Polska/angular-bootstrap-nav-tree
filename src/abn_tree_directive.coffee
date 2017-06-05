@@ -102,6 +102,7 @@ module.directive 'abnTree',['$timeout',($timeout)->
 
 
     scope.user_clicks_branch = (branch)->
+      branch.expanded = !branch.expanded
       if branch isnt selected_branch
          select_branch(branch)
 

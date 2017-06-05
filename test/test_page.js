@@ -24,11 +24,11 @@
     treedata_avm = [
       {
         label: 'Animal',
-        image: 'http://via.placeholder.com/20x20',
+        image: 'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg',
         children: [
           {
             label: 'Dog',
-            image: 'http://via.placeholder.com/20x20',
+            image: 'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg',
             data: {
               description: "man's best friend"
             }
