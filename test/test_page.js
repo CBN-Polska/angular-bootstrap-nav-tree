@@ -24,9 +24,11 @@
     treedata_avm = [
       {
         label: 'Animal',
+        image: 'http://via.placeholder.com/20x20',
         children: [
           {
             label: 'Dog',
+            image: 'http://via.placeholder.com/20x20',
             data: {
               description: "man's best friend"
             }

@@ -1,4 +1,4 @@
-  
+
 
 deps = ['angularBootstrapNavTree']
 if angular.version.full.indexOf("1.2")>=0
@@ -7,11 +7,11 @@ if angular.version.full.indexOf("1.2")>=0
 
 app = angular.module 'AbnTest', deps
 app.controller 'AbnTestController',($scope,$timeout)->
-  
+
   #
   # a default "on-select" handler can be specified
   # for the tree ( as attribute "on-select" )
-  #   
+  #
   $scope.my_tree_handler = (branch)->
     $scope.output = "You selected: "+branch.label
     if branch.data?.description
@@ -19,7 +19,7 @@ app.controller 'AbnTestController',($scope,$timeout)->
     #
     # This example handler just sets "output",
     # ...but your handler could do anything here...
-    # 
+    #
 
 
   #
@@ -29,17 +29,17 @@ app.controller 'AbnTestController',($scope,$timeout)->
 
   #
   # a single handler can be used on several branches, like this:
-  # 
+  #
   apple_selected = (branch)->
     $scope.output = "APPLE! : "+branch.label
     #
     # ( your handler can do anything here )
-    # 
+    #
 
 
   #
   # Example TREE DATA : Animal,Vegetable,Mineral
-  # 
+  #
   # Each branch can have the following attributes:
   #
   # label    : the displayed text for the branch
@@ -50,16 +50,18 @@ app.controller 'AbnTestController',($scope,$timeout)->
 
   treedata_avm = [
     label:'Animal'
+    image:'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg'
     children:[
       label:'Dog'
+      image:'https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg'
       data:
         #
         # "data" is yours -- put anything in here
         # you can read it back in your on-select handler
         # as "branch.data"
-        # 
+        #
         description:"man's best friend"
-    , 
+    ,
       label:'Cat'
       data:
         description:"Felis catus"
@@ -69,7 +71,7 @@ app.controller 'AbnTestController',($scope,$timeout)->
         description:"hungry, hungry"
     ,
       label:'Chicken'
-      children:['White Leghorn','Rhode Island Red','Jersey Giant']        
+      children:['White Leghorn','Rhode Island Red','Jersey Giant']
     ]
   ,
 
@@ -81,7 +83,7 @@ app.controller 'AbnTestController',($scope,$timeout)->
     onSelect:(branch)->
       # special "on-select" function for this branch
       $scope.output = "Vegetable: "+branch.data.definition
-      
+
 
     children:[
       label:'Oranges'
@@ -117,7 +119,7 @@ app.controller 'AbnTestController',($scope,$timeout)->
         label:'Thermosetting Polymer'
         children:['polyester','polyurethane','vulcanized rubber','bakelite','urea-formaldehyde']
       ,
-      ]      
+      ]
     ]
   ]
 
@@ -165,7 +167,7 @@ app.controller 'AbnTestController',($scope,$timeout)->
   $scope.my_tree = tree = {}
   # just create an empty object, and pass it to the abn-tree as "tree-control"
   # ...it will be populated with Tree API functions
-  
+
 
   $scope.try_async_load = ()->
     $scope.my_data = []
@@ -186,5 +188,3 @@ app.controller 'AbnTestController',($scope,$timeout)->
       data:
         something:42
         else:43
-
-
